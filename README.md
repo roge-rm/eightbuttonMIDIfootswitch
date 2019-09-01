@@ -18,7 +18,7 @@ Items used in this build:
 - 2 x 220 ohm resistors for the MIDI port (see https://www.pjrc.com/teensy/td_libs_MIDI.html for wiring info)
 - 7mm momentary push button (https://www.aliexpress.com/item/32790920961.html) as an easy way to update the Teensy without opening the case. Eventually I will replace this with a DC input jack.
 - 6 x M3 countersunk screws, anything between 5 and 10mm in length will probably work (this is to hold the top of the housing down)
-- 2 x M2 bolts and nuts, around 10mm length (to hold the MIDI port in place)
+- 2 x M2 or M2.5 bolts and nuts, around 10mm length (to hold the MIDI port in place)
 
 Pinout/wiring diagram:
 ![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
