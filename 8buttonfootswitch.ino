@@ -12,9 +12,6 @@
 #define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-// Number of footswitches
-const int NUM_SWITCHES = 8;
-
 // Declare pins for footswitches
 const int switchPin1 = 10;
 const int switchPin2 = 11;
@@ -37,15 +34,15 @@ const int ledPin8 = 31;
 
 // Define time before before MIDI OFF note is sent. This is needed because the footswitches are latching but we are pretending they are momentary
 // Default note off time is 10ms
-
 const int MIDI_NOTEOFF_TIME = 25;
 
 // Default channel for MIDI notes
+const int MIDI_NOTE_CHAN = 11;
 
-const int MIDI_CHAN = 11;
+// Default channel for MIDI CC
+const int MIDI_CC_CHAN = 11;
 
 // Create MIDI instance for 5 pin MIDI output
-
 MIDI_CREATE_INSTANCE(HardwareSerial, Serial1, MIDI);
 
 // Default MIDI notes/velocities
@@ -67,18 +64,8 @@ const int switchVel6 = 64;
 const int switchVel7 = 64;
 const int switchVel8 = 64;
 
-const int switchChan1 = 11;
-const int switchChan2 = 11;
-const int switchChan3 = 11;
-const int switchChan4 = 11;
-const int switchChan5 = 11;
-const int switchChan6 = 11;
-const int switchChan7 = 11;
-const int switchChan8 = 11;
-
 // Create Bounce objects for each button and switch.
 // Default debounce time is 5ms
-
 const int DEBOUNCE_TIME = 5;
 
 Bounce button1 = Bounce(switchPin1, DEBOUNCE_TIME);
@@ -96,7 +83,6 @@ void setup() {
   MIDI.begin();
 
   // Configure switch pins as for input mode with pullup resistors
-
   pinMode (switchPin1, INPUT_PULLUP);
   pinMode (switchPin2, INPUT_PULLUP);
   pinMode (switchPin3, INPUT_PULLUP);
@@ -107,7 +93,6 @@ void setup() {
   pinMode (switchPin8, INPUT_PULLUP);
 
   // Configure LED pins for output
-
   pinMode (ledPin1, OUTPUT);
   pinMode (ledPin2, OUTPUT);
   pinMode (ledPin3, OUTPUT);
@@ -142,11 +127,11 @@ void loop() {
     display.setCursor(10, 50);
     display.println(switchNote1);
     digitalWrite(ledPin1, HIGH);
-    usbMIDI.sendNoteOn(switchNote1, switchVel1, switchChan1);
-    MIDI.sendNoteOn(switchNote1, switchVel1, switchChan1);
+    usbMIDI.sendNoteOn(switchNote1, switchVel1, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote1, switchVel1, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote1, 0, switchChan1);
-    MIDI.sendNoteOff(switchNote1, 0, switchChan1);
+    usbMIDI.sendNoteOff(switchNote1, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote1, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin1, LOW);
   }
 
@@ -154,11 +139,11 @@ void loop() {
     display.setCursor(40, 50);
     display.println(switchNote2);
     digitalWrite(ledPin2, HIGH);
-    usbMIDI.sendNoteOn(switchNote2, switchVel2, switchChan2);
-    MIDI.sendNoteOn(switchNote2, switchVel2, switchChan2);
+    usbMIDI.sendNoteOn(switchNote2, switchVel2, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote2, switchVel2, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote2, 0, switchChan2);
-    MIDI.sendNoteOff(switchNote2, 0, switchChan2);
+    usbMIDI.sendNoteOff(switchNote2, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote2, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin2, LOW);
   }
 
@@ -166,11 +151,11 @@ void loop() {
     display.setCursor(70, 50);
     display.println(switchNote3);
     digitalWrite(ledPin3, HIGH);
-    usbMIDI.sendNoteOn(switchNote3, switchVel3, switchChan3);
-    MIDI.sendNoteOn(switchNote3, switchVel3, switchChan3);
+    usbMIDI.sendNoteOn(switchNote3, switchVel3, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote3, switchVel3, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote3, 0, switchChan3);
-    MIDI.sendNoteOff(switchNote3, 0, switchChan3);
+    usbMIDI.sendNoteOff(switchNote3, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote3, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin3, LOW);
   }
 
@@ -178,11 +163,11 @@ void loop() {
     display.setCursor(100, 50);
     display.println(switchNote4);
     digitalWrite(ledPin4, HIGH);
-    usbMIDI.sendNoteOn(switchNote4, switchVel4, switchChan4);
-    MIDI.sendNoteOn(switchNote4, switchVel4, switchChan4);
+    usbMIDI.sendNoteOn(switchNote4, switchVel4, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote4, switchVel4, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote4, 0, switchChan4);
-    MIDI.sendNoteOff(switchNote4, 0, switchChan4);
+    usbMIDI.sendNoteOff(switchNote4, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote4, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin4, LOW);
   }
 
@@ -190,11 +175,11 @@ void loop() {
     display.setCursor(10, 10);
     display.println(switchNote5);
     digitalWrite(ledPin5, HIGH);
-    usbMIDI.sendNoteOn(switchNote5, switchVel5, switchChan5);
-    MIDI.sendNoteOn(switchNote5, switchVel5, switchChan5);
+    usbMIDI.sendNoteOn(switchNote5, switchVel5, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote5, switchVel5, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote5, 0, switchChan5);
-    MIDI.sendNoteOff(switchNote5, 0, switchChan5);
+    usbMIDI.sendNoteOff(switchNote5, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote5, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin5, LOW);
   }
 
@@ -202,11 +187,11 @@ void loop() {
     display.setCursor(40, 10);
     display.println(switchNote6);
     digitalWrite(ledPin6, HIGH);
-    usbMIDI.sendNoteOn(switchNote6, switchVel6, switchChan6);
-    MIDI.sendNoteOn(switchNote6, switchVel6, switchChan6);
+    usbMIDI.sendNoteOn(switchNote6, switchVel6, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote6, switchVel6, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote6, 0, switchChan6);
-    MIDI.sendNoteOff(switchNote6, 0, switchChan6);
+    usbMIDI.sendNoteOff(switchNote6, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote6, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin6, LOW);
   }
 
@@ -214,28 +199,33 @@ void loop() {
     display.setCursor(70, 10);
     display.println(switchNote7);
     digitalWrite(ledPin7, HIGH);
-    usbMIDI.sendNoteOn(switchNote7, switchVel7, switchChan7);
-    MIDI.sendNoteOn(switchNote7, switchVel7, switchChan7);
+    usbMIDI.sendNoteOn(switchNote7, switchVel7, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote7, switchVel7, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote7, 0, switchChan7);
-    MIDI.sendNoteOff(switchNote7, 0, switchChan7);
+    usbMIDI.sendNoteOff(switchNote7, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote7, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin7, LOW);
   }
 
   if (button8.risingEdge() || button8.fallingEdge()) {
-    display.setCursor(70, 10);
+    display.setCursor(100, 10);
     display.println(switchNote8);
     digitalWrite(ledPin8, HIGH);
-    usbMIDI.sendNoteOn(switchNote8, switchVel8, switchChan8);
-    MIDI.sendNoteOn(switchNote8, switchVel8, switchChan8);
+    usbMIDI.sendNoteOn(switchNote8, switchVel8, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOn(switchNote8, switchVel8, MIDI_NOTE_CHAN);
     delay(MIDI_NOTEOFF_TIME);
-    usbMIDI.sendNoteOff(switchNote8, 0, switchChan8);
-    MIDI.sendNoteOff(switchNote8, 0, switchChan8);
+    usbMIDI.sendNoteOff(switchNote8, 0, MIDI_NOTE_CHAN);
+    MIDI.sendNoteOff(switchNote8, 0, MIDI_NOTE_CHAN);
     digitalWrite(ledPin8, LOW);
   }
 
   display.display();
   display.clearDisplay();
+
+  while (usbMIDI.read())
+  {
+    // ignoring incoming messages, so don't do anything here.
+  }
 }
 
 void updatebuttons() {
