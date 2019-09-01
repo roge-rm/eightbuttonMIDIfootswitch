@@ -20,8 +20,11 @@ Items used in this build:
 - 6 x M3 countersunk screws, anything between 5 and 10mm in length will probably work (this is to hold the top of the housing down)
 - 2 x M2 or M2.5 bolts and nuts, around 10mm length (to hold the MIDI port in place)
 
-Pinout/wiring diagram:
+Rough pinout/wiring diagram"
 ![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
+
+I have exported a schematic from KiCad that goes into more detail:
+https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png
 
 More instructions and better diagrams to follow. 
 Code is WIP, I have more functionality I would like to add (such as the option to send CC and Program Change messages instead of MIDI notes) that will be coming as I get to it.
