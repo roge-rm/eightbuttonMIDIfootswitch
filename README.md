@@ -13,7 +13,7 @@ The idea is to build a footswitch that sends MIDI messages via USB and regular 5
 - Hookup wire (I used 28AWG)
 - Tape (for binding wires, holding the OLED screen in place)
 - Screwdriver
-- Teensy ++2.0
+- Teensy ++2.0 (https://www.pjrc.com/store/teensypp.html)
 - 8 x Guitar Footswitch (https://www.aliexpress.com/item/32826054526.html) - I did not realize these were latching switches when I ordered them, momentary switches would have been a better choice.
 - 0.96 OLED I2C display (https://www.aliexpress.com/item/32896971385.html)
 - 8 x 5mm 5V LEDs from eBay (I don't have a link to the specific item, they have resistors built into the wiring)
