@@ -7,7 +7,7 @@ I built this to go along with my Synthstrom Deluge as a way to manage the new lo
 
 The idea is to build a footswitch that sends MIDI messages via USB and regular 5 pin MIDI. I am not a coder, a 3D designer, a good solderer(er), etc so if you are good at any of those things you will likely see things you will not be proud of. I'm just happy to be here and happy to share what I've learned, hopefully you can use this information to make yourself something.
 
-####Items used in this build:
+#### Items used in this build:
 - 3D Printer
 - Soldering iron + solder
 - Hookup wire (I used 28AWG)
@@ -23,13 +23,13 @@ The idea is to build a footswitch that sends MIDI messages via USB and regular 5
 - 6 x M3 countersunk screws, anything between 5 and 10mm in length will probably work (this is to hold the top of the housing down)
 - 2 x M2 or M2.5 bolts and nuts, around 10mm length (to hold the MIDI port in place)
 
-####Rough pinout/wiring diagram:
+#### Rough pinout/wiring diagram:
 ![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
 
 I have exported a schematic from KiCad that goes into more detail:
 https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png
 
-####Assembly instructions:
+#### Assembly instructions:
 - Print the top and bottom of the housing with your handy 3D printer (I use a Tevo Tarantula myself). I printed in PLA with a layer height of 0.3mm. You will need to use supports for the bottom of the housing.
 - Install the OLED screen in the top housing. I initially planned to screw it into place but ended up using double sided tape for now. Screws would be a better idea but I haven't gone digging in my parts bin for something small enough yet.
 - Wire the OLED screen to the Teensy. I used the 5V and GND from near the USB port (top of the pinout diagram), pin 0 for SCK, and pin 1 for SDA.
