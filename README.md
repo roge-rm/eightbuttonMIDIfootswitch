@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images
 #### Assembly instructions:
 - Print the top and bottom of the housing with your handy 3D printer (I use a Tevo Tarantula myself). I printed in PLA with a layer height of 0.3mm. You will need to use supports for the bottom of the housing.
 - Install the OLED screen in the top housing. I initially planned to screw it into place but ended up using double sided tape for now. Screws would be a better idea but I haven't gone digging in my parts bin for something small enough yet.
-- Wire the OLED screen to the Teensy. I used the 5V and GND from near the USB port (top of the pinout diagram), pin 0 for SCK, and pin 1 for SDA.
+- Wire the OLED screen to the Teensy, 5V and GND from wherever works for you and pin 0 for SCK/pin 1 for SDA.
 - Install the footswitches in the top housing. Marvel at how footswitches are really hard to press with your fingers.
 - Wire the footswitches to the Teensy. I wired the grounds first by daisy-chaining each switch to the next (and then the last switch the GND on the Teensy) and then wired the other sides of the switches to pins 10 through 17.
 - Install the LEDs in the top housing. I made the holes in the top plate just large enough to jam the LEDs in so they don't need any glue. Maybe a little glue around the base wouldn't hurt.
