@@ -20,7 +20,7 @@ Items used in this build:
 - 2 M2 bolts and nuts, around 10mm length (to hold the MIDI port in place)
 
 Pinout/wiring diagram:
-![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/pinout.png)
+![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
 
 More instructions and better diagrams to follow. 
 Code is WIP, I have more functionality I would like to add (such as the option to send CC and Program Change messages instead of MIDI notes) that will be coming as I get to it.
