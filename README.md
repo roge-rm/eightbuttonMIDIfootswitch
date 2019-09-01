@@ -1,5 +1,6 @@
 # eightbuttonMIDIfootswitch
-An eight button USB/5 pin MIDI footswitch
+An eight button USB/5 pin MIDI footswitch. 
+Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
 I built this to go along with my Synthstrom Deluge as a way to manage the new looping functionality in the (pending) 3.0 firmware. 
 
