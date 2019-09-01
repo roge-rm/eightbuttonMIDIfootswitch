@@ -123,8 +123,10 @@ void setup() {
     for (;;); // Don't proceed, loop forever
   }
 
+  updatebuttons(); // Pull initial button status to prevent phantom MIDI messages from being sent once the loop starts
+
   display.display();
-  delay(2000);
+  delay(500);
 
   display.clearDisplay();
 }
