@@ -7,9 +7,8 @@ An eight button USB/5 pin MIDI footswitch.
 
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
-I built this to go along with my Synthstrom Deluge as a way to manage the new looping functionality in the (pending) 3.0 firmware. 
+I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/product/deluge/) as a way to manage the new looping functionality in the (pending) 3.0 firmware. I wanted to be able to turn the loop mode on/off, as well as other various functions, either via USB MIDI or via standard 5-pin MIDI. This does that, and more! 
 
-The idea was to build a footswitch that sends MIDI on/off messages via USB/DIN-5 MIDI port. This does that, and more! 
 Currently there are 5 modes of operation selectable at boot:
 1. MIDI Note Timed (on note sent on button press, off note sent after a preset time)
 2. MIDI Note Toggle (press button once to turn on, press again to turn off)
