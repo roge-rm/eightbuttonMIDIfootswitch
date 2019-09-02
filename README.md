@@ -45,7 +45,7 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 ![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
 
 I have exported a schematic from KiCad that goes into more detail:
-https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png width=600>
 
 #### Assembly instructions:
 - Print the top and bottom of the housing with your handy 3D printer (I use a Tevo Tarantula myself). I printed in PLA with a layer height of 0.3mm. You will need to use supports for the bottom of the housing.
