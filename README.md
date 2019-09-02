@@ -61,7 +61,7 @@ You can check out some pictures of my wiring [here](https://raw.githubuserconten
 - Wire the 7mm momentary switch to the RST and GND pins on the end of the Teensy furthest from the USB port (the bottom, in the pinout diagram). 
 - Solder 220 ohm resistors to pins 5 and 4 on the DIN-5 MIDI plug and install it into the bottom of the housing. See the MIDI library page [here](https://www.pjrc.com/teensy/td_libs_MIDI.html) for more information/diagrams.
 - Wire the MIDI plug as shown in the [schematic](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png). Pin 2 goes to GND (I ran it to the reset switch as it was close by), pin 5 (via 220 ohm resistor) goes to pin 3 on the Teensy, and pin 4 on the DIN-5 MIDI plug (via 220 ohm resistor) goes to a 5V pin on the Teensy (I used the one by the RST pin).
-- Edit the [code](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch.ino) to set pin assignments and customize your MIDI/CC/Program Change messages and then upload it to the Teensy using the Arduino/Teensyduino software
+- Edit the [code](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch.ino) to set pin assignments and customize your MIDI/CC/Program Change messages and then upload it to the Teensy using the Arduino/Teensyduino software. Make sure you set the USB Type (under Tools->USB Type) to MIDI.
 - Test it out! The LEDs will flash as you push the buttons and the screen will display the MIDI message number being sent. 
 - Squish the wires into place, close the housing and screw it together. You may need to bore out the screw holes a bit with a drill.
 - Stomp those switches until your roommate/neighbour/family member complains about the noise.
