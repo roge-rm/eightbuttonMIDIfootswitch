@@ -48,6 +48,8 @@ I have exported a schematic from KiCad that goes into more detail:
 <img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png width=800>
 
 #### Assembly instructions:
+You can check out some pictures of my wiring [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring1.jpg), [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring2.jpg), and [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring3.jpg).
+
 - Print the top and bottom of the housing with your handy 3D printer (I use a Tevo Tarantula myself). I printed in PLA with a layer height of 0.3mm. You will need to use supports for the bottom of the housing.
 - Install the OLED screen in the top housing. I initially planned to screw it into place but ended up using double sided tape for now. Screws would be a better idea but I haven't gone digging in my parts bin for something small enough yet.
 - Wire the OLED screen to the Teensy, 5V and GND from wherever works for you and pin 0 for SCK/pin 1 for SDA.
