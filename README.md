@@ -5,7 +5,14 @@ Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
 I built this to go along with my Synthstrom Deluge as a way to manage the new looping functionality in the (pending) 3.0 firmware. 
 
-The idea is to build a footswitch that sends MIDI messages via USB and regular 5 pin MIDI. I am not a coder, a 3D designer, a good solderer(er), etc so if you are good at any of those things you will likely see things you will not be proud of. I'm just happy to be here and happy to share what I've learned, hopefully you can use this information to make yourself something.
+The idea was to build a footswitch that sends MIDI on/off messages via USB/DIN-5 MIDI port. This does that, and more! 
+Currently there are 5 modes of operation selectable at boot:
+1. MIDI Note Timed (on note sent on button press, off note sent after a preset time)
+2. MIDI Note Toggle (press button once to turn on, press again to turn off)
+3. MIDI CC Timed (same as mode 1 but with CC messages) 
+4. MIDI CC Toggle (same as mode 2 but with CC)
+5. Program Change (pressing each of the 8 buttons sends a different Program Change message)
+If you do not choose an option the footswitch will start the default (mode 1) after a set timeout (6 seconds). 
 
 #### Items used in this build:
 - 3D Printer
