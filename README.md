@@ -1,6 +1,8 @@
 # eightbuttonMIDIfootswitch
 An eight button USB/5 pin MIDI footswitch. 
 
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing1.jpg width=400>
+
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
 I built this to go along with my Synthstrom Deluge as a way to manage the new looping functionality in the (pending) 3.0 firmware. 
