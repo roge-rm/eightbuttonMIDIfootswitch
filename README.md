@@ -10,7 +10,7 @@ The idea is to build a footswitch that sends MIDI messages via USB and regular 5
 #### Items used in this build:
 - 3D Printer
 - Soldering iron + solder
-- Hookup wire (I used 28AWG)
+- Hookup wire (I used 28AWG) + appropriate heatshrink
 - Tape (for binding wires, holding the OLED screen in place)
 - Screwdriver
 - Teensy ++2.0 (https://www.pjrc.com/store/teensypp.html)
