@@ -1,7 +1,9 @@
 # eightbuttonMIDIfootswitch
 An eight button USB/5 pin MIDI footswitch. 
 
-<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing1.jpg width=400>
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing1.jpg width=600>
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing2.jpg width=300><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing3.jpg width=300>
+
 
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
