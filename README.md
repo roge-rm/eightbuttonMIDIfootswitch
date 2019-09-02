@@ -20,7 +20,7 @@ If you do not choose an option the footswitch will start the default (mode 1) af
 
 You can customize all of the messages sent by the footswitch. Currently the following options are configurable (from the code):
 - MIDI, CC, and Program Change channels (they can be set separately)
-- MIDI notes numbers and velocities
+- MIDI note numbers and velocities
 - Control Change numbers and values (you can set the "off" value as well in case you want to switch between two values and not on/off)
 - Program Change numbers
 
