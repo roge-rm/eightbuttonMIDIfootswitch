@@ -1,6 +1,10 @@
 # eightbuttonMIDIfootswitch
 An eight button USB/5 pin MIDI footswitch. 
 
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing1.jpg width=600><br>
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing2.jpg width=300><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/housing3.jpg width=300>
+
+
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
 I built this to go along with my Synthstrom Deluge as a way to manage the new looping functionality in the (pending) 3.0 firmware. 
@@ -29,7 +33,7 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 - Screwdriver
 - Teensy ++2.0 (https://www.pjrc.com/store/teensypp.html)
 - 8 x Guitar Footswitch (https://www.aliexpress.com/item/32826054526.html) - I did not realize these were latching switches when I ordered them, momentary switches would have been a better choice.
-- 0.96 OLED I2C display (https://www.aliexpress.com/item/32896971385.html)
+- 0.96" OLED I2C display (https://www.aliexpress.com/item/32896971385.html)
 - 8 x 5mm 5V LEDs from eBay (I don't have a link to the specific item, they have resistors built into the wiring)
 - 5 pin MIDI port (https://www.aliexpress.com/item/32972269819.html)
 - 2 x 220 ohm resistors for the MIDI port (see https://www.pjrc.com/teensy/td_libs_MIDI.html for wiring info)
@@ -41,9 +45,11 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 ![Teensy ++2.0 Pinout](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/pinout.png)
 
 I have exported a schematic from KiCad that goes into more detail:
-https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png width=800>
 
 #### Assembly instructions:
+You can check out some pictures of my wiring [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring1.jpg), [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring2.jpg), and [here](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/wiring3.jpg).
+
 - Print the top and bottom of the housing with your handy 3D printer (I use a Tevo Tarantula myself). I printed in PLA with a layer height of 0.3mm. You will need to use supports for the bottom of the housing.
 - Install the OLED screen in the top housing. I initially planned to screw it into place but ended up using double sided tape for now. Screws would be a better idea but I haven't gone digging in my parts bin for something small enough yet.
 - Wire the OLED screen to the Teensy, 5V and GND from wherever works for you and pin 0 for SCK/pin 1 for SDA.
