@@ -29,6 +29,10 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 - LOAD - load values from EEPROM
 - SAVE - save values to EEPROM (changes you make to settings will not be stored unless you press this)
 
+The menu should be straight forward to use. There are a couple of screens that have no back button (due to all eight buttons being used for something else), they will time out to the previous screen after a set limit (which can be edited in the DEF menu).
+
+<img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180004.jpg width=150>
+
 #### Items used in this build:
 - 3D Printer
 - Soldering iron + solder
