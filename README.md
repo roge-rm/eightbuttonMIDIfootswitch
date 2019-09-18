@@ -7,22 +7,27 @@ An eight button USB/5 pin MIDI footswitch.
 
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
 
-I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/product/deluge/) as a way to manage the new looping functionality in the (pending) 3.0 firmware. I wanted to be able to turn the loop mode on/off, as well as other various functions, either via USB MIDI or via standard 5-pin MIDI. This does that, and more! 
+I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/product/deluge/) as a way to manage the new looping functionality in the (now out) 3.0 firmware. I wanted to be able to turn the loop mode on/off, as well as other various functions, either via USB MIDI or via standard 5-pin MIDI. This does that, and more! 
 
-Currently there are 5 modes of operation selectable at boot:
+Currently there are 6 modes of operation selectable at boot. 
+The selection screen can be returned to at any time by resetting the unit or pressing buttons 4 + 8 (top and bottom on the right side) together simultaneously.
 1. MIDI Note Timed (on note sent on button press, off note sent after a preset time)
 2. MIDI Note Toggle (press button once to turn on, press again to turn off)
 3. MIDI CC Timed (same as mode 1 but with CC messages) 
 4. MIDI CC Toggle (same as mode 2 but with CC)
 5. Program Change (pressing each of the 8 buttons sends a different Program Change message)
+8. Settings Menu (change channels, MIDI messages, default options)
 
 If you do not choose an option the footswitch will start the default (mode 1) after a set timeout (6 seconds). 
 
-You can customize all of the messages sent by the footswitch. Currently the following options are configurable (from the code):
-- MIDI, CC, and Program Change channels (they can be set separately)
-- MIDI note numbers and velocities
-- Control Change numbers and values (you can set the "off" value as well in case you want to switch between two values and not on/off)
-- Program Change numbers
+You can customize all of the messages sent by the footswitch. Currently the following options are configurable from the settings menu:
+- CHAN - channel for NOTE/CC/PC messages (set separately)
+- NOTE - MIDI note numbers and velocities
+- CC - Control Change numbers and on/off values
+- PC - Program Change numbers
+- DEF - default runmode (RUNM), menu timeout (MENU), how long before OFF note/CC is sent (NOFF/COFF)
+- LOAD - load values from EEPROM
+- SAVE - save values to EEPROM (changes you make to settings will not be stored unless you press this)
 
 #### Items used in this build:
 - 3D Printer
@@ -60,7 +65,7 @@ You can check out some pictures of my wiring [here](https://raw.githubuserconten
 - Wire the 7mm momentary switch to the RST and GND pins on the end of the Teensy furthest from the USB port (the bottom, in the pinout diagram). 
 - Solder 220 ohm resistors to pins 5 and 4 on the DIN-5 MIDI plug and install it into the bottom of the housing. See the MIDI library page [here](https://www.pjrc.com/teensy/td_libs_MIDI.html) for more information/diagrams.
 - Wire the MIDI plug as shown in the [schematic](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png). Pin 2 goes to GND (I ran it to the reset switch as it was close by), pin 5 (via 220 ohm resistor) goes to pin 3 on the Teensy, and pin 4 on the DIN-5 MIDI plug (via 220 ohm resistor) goes to a 5V pin on the Teensy (I used the one by the RST pin).
-- Edit the [code](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch.ino) to set pin assignments and customize your MIDI/CC/Program Change messages and then upload it to the Teensy using the Arduino/Teensyduino software. Make sure you set the USB Type (under Tools->USB Type) to MIDI.
+- Edit the [code](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch.ino) to set pin assignments and customize your MIDI/CC/Program Change messages (you can change these from the switch itself) and then upload it to the Teensy using the Arduino/Teensyduino software. Make sure you set the USB Type (under Tools->USB Type) to MIDI.
 - Test it out! The LEDs will flash as you push the buttons and the screen will display the MIDI message number being sent. 
 - Squish the wires into place, close the housing and screw it together. You may need to bore out the screw holes a bit with a drill.
 - Stomp those switches until your roommate/neighbour/family member complains about the noise.
