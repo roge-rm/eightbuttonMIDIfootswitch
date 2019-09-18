@@ -212,7 +212,7 @@ void runmodeSELECTMODE() { //Give choice between running modes, choose default m
   } else display.setTextColor(WHITE, BLACK);
   display.println(F("5"));
   display.setCursor(100, 10);
-  display.setTextColor(WHITE, BLACK)
+  display.setTextColor(WHITE, BLACK);
   display.println(F("8"));
 
   if BUTTON1 {
@@ -2070,7 +2070,7 @@ void valueCHECK() { //Check values when editing to keep things real
   if (RUNMODE_DEFAULT < 1) RUNMODE_DEFAULT = 1;
   if (RUNMODE_DEFAULT > 5) RUNMODE_DEFAULT = 5;
   if (MENU_TIMEOUT < 1000) MENU_TIMEOUT = 1000;
-  if (MENU_TIMEOUT > 120000) MENU_TIMEOUT = 120000;
+  if (MENU_TIMEOUT > 100000) MENU_TIMEOUT = 1000;
   if (MIDI_NOTEOFF_TIME < 5) MIDI_NOTEOFF_TIME = 5;
   if (MIDI_NOTEOFF_TIME > 100000) MIDI_NOTEOFF_TIME = 100000;
   if (MIDI_CCOFF_TIME < 5) MIDI_CCOFF_TIME = 5;
