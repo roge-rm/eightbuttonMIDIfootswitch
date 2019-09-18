@@ -212,6 +212,7 @@ void runmodeSELECTMODE() { //Give choice between running modes, choose default m
   } else display.setTextColor(WHITE, BLACK);
   display.println(F("5"));
   display.setCursor(100, 10);
+  display.setTextColor(WHITE, BLACK)
   display.println(F("8"));
 
   if BUTTON1 {
