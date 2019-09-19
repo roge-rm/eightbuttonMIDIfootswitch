@@ -29,7 +29,7 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 - LOAD - load values from EEPROM
 - SAVE - save values to EEPROM (changes you make to settings will not be stored unless you press this)
 
-The menu should be straight forward to use. There are a couple of screens that have no back button (due to all eight buttons being used for something else), they will time out to the previous screen after a set limit (which can be edited in the DEF menu).
+The menu should be straight forward to use. There are a couple of screens that have no back button (due to all eight buttons being used for something else), they will time out to the previous screen after a set limit (which can be edited in the DEFaults menu).
 
 <img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180004.jpg width=200><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180005.jpg width=200><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180006.jpg width=200><br>
 <img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180007.jpg width=200><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180008.jpg width=200><img src=https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/screenshots/20190918-P9180009.jpg width=200><br>
