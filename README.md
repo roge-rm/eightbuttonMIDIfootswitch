@@ -11,12 +11,12 @@ I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/prod
 
 Currently there are 6 modes of operation selectable at boot. 
 The selection screen can be returned to at any time by resetting the unit or pressing buttons 4 + 8 (top and bottom on the right side) together simultaneously.
-1. MIDI Note Timed (on note sent on button press, off note sent after a preset time)
-2. MIDI Note Toggle (press button once to turn on, press again to turn off)
-3. MIDI CC Timed (same as mode 1 but with CC messages) 
-4. MIDI CC Toggle (same as mode 2 but with CC)
-5. Program Change (pressing each of the 8 buttons sends a different Program Change message)
-8. Settings Menu (change channels, MIDI messages, default options)
+- MIDI Note Timed (on note sent on button press, off note sent after a preset time)
+- MIDI Note Toggle (press button once to turn on, press again to turn off)
+- MIDI CC Timed (same as mode 1 but with CC messages) 
+- MIDI CC Toggle (same as mode 2 but with CC)
+- Program Change (pressing each of the 8 buttons sends a different Program Change message)
+- Settings Menu (change channels, MIDI messages, default options)
 
 If you do not choose an option the footswitch will start the default (mode 1) after a set timeout (6 seconds). 
 
