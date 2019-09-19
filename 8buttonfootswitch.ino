@@ -1313,72 +1313,73 @@ void menuLEVEL3() { //CC edit submenu
           if (menuCat[1] == 8) switchCCValOff[7] += 10;
         }
       }
+
+      else if BUTTON5 {
+      if (menuCat[2] == 1) {
+          if (menuCat[1] == 1) switchCC[0]--;
+          if (menuCat[1] == 2) switchCC[1]--;
+          if (menuCat[1] == 3) switchCC[2]--;
+          if (menuCat[1] == 4) switchCC[3]--;
+          if (menuCat[1] == 5) switchCC[4]--;
+          if (menuCat[1] == 6) switchCC[5]--;
+          if (menuCat[1] == 7) switchCC[6]--;
+          if (menuCat[1] == 8) switchCC[7]--;
+        }
+        else if (menuCat[2] == 2) {
+          if (menuCat[1] == 1) switchCCValOn[0]--;
+          if (menuCat[1] == 2) switchCCValOn[1]--;
+          if (menuCat[1] == 3) switchCCValOn[2]--;
+          if (menuCat[1] == 4) switchCCValOn[3]--;
+          if (menuCat[1] == 5) switchCCValOn[4]--;
+          if (menuCat[1] == 6) switchCCValOn[5]--;
+          if (menuCat[1] == 7) switchCCValOn[6]--;
+          if (menuCat[1] == 8) switchCCValOn[7]--;
+        }
+        else if (menuCat[2] == 3) {
+          if (menuCat[1] == 1) switchCCValOff[0]--;
+          if (menuCat[1] == 2) switchCCValOff[1]--;
+          if (menuCat[1] == 3) switchCCValOff[2]--;
+          if (menuCat[1] == 4) switchCCValOff[3]--;
+          if (menuCat[1] == 5) switchCCValOff[4]--;
+          if (menuCat[1] == 6) switchCCValOff[5]--;
+          if (menuCat[1] == 7) switchCCValOff[6]--;
+          if (menuCat[1] == 8) switchCCValOff[7]--;
+        }
+      }
+      else if BUTTON6 {
+      if (menuCat[2] == 1) {
+          if (menuCat[1] == 1) switchCC[0] -= 10;
+          if (menuCat[1] == 2) switchCC[1] -= 10;
+          if (menuCat[1] == 3) switchCC[2] -= 10;
+          if (menuCat[1] == 4) switchCC[3] -= 10;
+          if (menuCat[1] == 5) switchCC[4] -= 10;
+          if (menuCat[1] == 6) switchCC[5] -= 10;
+          if (menuCat[1] == 7) switchCC[6] -= 10;
+          if (menuCat[1] == 8) switchCC[7] -= 10;
+        }
+        else if (menuCat[2] == 2) {
+          if (menuCat[1] == 1) switchCCValOn[0] -= 10;
+          if (menuCat[1] == 2) switchCCValOn[1] -= 10;
+          if (menuCat[1] == 3) switchCCValOn[2] -= 10;
+          if (menuCat[1] == 4) switchCCValOn[3] -= 10;
+          if (menuCat[1] == 5) switchCCValOn[4] -= 10;
+          if (menuCat[1] == 6) switchCCValOn[5] -= 10;
+          if (menuCat[1] == 7) switchCCValOn[6] -= 10;
+          if (menuCat[1] == 8) switchCCValOn[7] -= 10;
+        }
+        else if (menuCat[2] == 3) {
+          if (menuCat[1] == 1) switchCCValOff[0] -= 10;
+          if (menuCat[1] == 2) switchCCValOff[1] -= 10;
+          if (menuCat[1] == 3) switchCCValOff[2] -= 10;
+          if (menuCat[1] == 4) switchCCValOff[3] -= 10;
+          if (menuCat[1] == 5) switchCCValOff[4] -= 10;
+          if (menuCat[1] == 6) switchCCValOff[5] -= 10;
+          if (menuCat[1] == 7) switchCCValOff[6] -= 10;
+          if (menuCat[1] == 8) switchCCValOff[7] -= 10;
+        }
+      }
+      valueCHECK();
     }
-    else if BUTTON5 {
-    if (menuCat[2] == 1) {
-        if (menuCat[1] == 1) switchCC[0]--;
-        if (menuCat[1] == 2) switchCC[1]--;
-        if (menuCat[1] == 3) switchCC[2]--;
-        if (menuCat[1] == 4) switchCC[3]--;
-        if (menuCat[1] == 5) switchCC[4]--;
-        if (menuCat[1] == 6) switchCC[5]--;
-        if (menuCat[1] == 7) switchCC[6]--;
-        if (menuCat[1] == 8) switchCC[7]--;
-      }
-      else if (menuCat[2] == 2) {
-        if (menuCat[1] == 1) switchCCValOn[0]--;
-        if (menuCat[1] == 2) switchCCValOn[1]--;
-        if (menuCat[1] == 3) switchCCValOn[2]--;
-        if (menuCat[1] == 4) switchCCValOn[3]--;
-        if (menuCat[1] == 5) switchCCValOn[4]--;
-        if (menuCat[1] == 6) switchCCValOn[5]--;
-        if (menuCat[1] == 7) switchCCValOn[6]--;
-        if (menuCat[1] == 8) switchCCValOn[7]--;
-      }
-      else if (menuCat[2] == 3) {
-        if (menuCat[1] == 1) switchCCValOff[0]--;
-        if (menuCat[1] == 2) switchCCValOff[1]--;
-        if (menuCat[1] == 3) switchCCValOff[2]--;
-        if (menuCat[1] == 4) switchCCValOff[3]--;
-        if (menuCat[1] == 5) switchCCValOff[4]--;
-        if (menuCat[1] == 6) switchCCValOff[5]--;
-        if (menuCat[1] == 7) switchCCValOff[6]--;
-        if (menuCat[1] == 8) switchCCValOff[7]--;
-      }
-    }
-    else if BUTTON6 {
-    if (menuCat[2] == 1) {
-        if (menuCat[1] == 1) switchCC[0] -= 10;
-        if (menuCat[1] == 2) switchCC[1] -= 10;
-        if (menuCat[1] == 3) switchCC[2] -= 10;
-        if (menuCat[1] == 4) switchCC[3] -= 10;
-        if (menuCat[1] == 5) switchCC[4] -= 10;
-        if (menuCat[1] == 6) switchCC[5] -= 10;
-        if (menuCat[1] == 7) switchCC[6] -= 10;
-        if (menuCat[1] == 8) switchCC[7] -= 10;
-      }
-      else if (menuCat[2] == 2) {
-        if (menuCat[1] == 1) switchCCValOn[0] -= 10;
-        if (menuCat[1] == 2) switchCCValOn[1] -= 10;
-        if (menuCat[1] == 3) switchCCValOn[2] -= 10;
-        if (menuCat[1] == 4) switchCCValOn[3] -= 10;
-        if (menuCat[1] == 5) switchCCValOn[4] -= 10;
-        if (menuCat[1] == 6) switchCCValOn[5] -= 10;
-        if (menuCat[1] == 7) switchCCValOn[6] -= 10;
-        if (menuCat[1] == 8) switchCCValOn[7] -= 10;
-      }
-      else if (menuCat[2] == 3) {
-        if (menuCat[1] == 1) switchCCValOff[0] -= 10;
-        if (menuCat[1] == 2) switchCCValOff[1] -= 10;
-        if (menuCat[1] == 3) switchCCValOff[2] -= 10;
-        if (menuCat[1] == 4) switchCCValOff[3] -= 10;
-        if (menuCat[1] == 5) switchCCValOff[4] -= 10;
-        if (menuCat[1] == 6) switchCCValOff[5] -= 10;
-        if (menuCat[1] == 7) switchCCValOff[6] -= 10;
-        if (menuCat[1] == 8) switchCCValOff[7] -= 10;
-      }
-    }
-    valueCHECK();
   }
 
   if (menuCat[1] < 1) {
