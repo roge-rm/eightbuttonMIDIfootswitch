@@ -1559,7 +1559,7 @@ void menuLEVEL3() { //CC edit submenu
           menuCat[2] = 2;
         }
         else if BUTTON3 {
-        blinkLED(2);
+        blinkLED(3);
           menuCat[2] = 3;
         }
       }
