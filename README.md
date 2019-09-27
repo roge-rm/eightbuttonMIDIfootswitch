@@ -6,6 +6,7 @@ An eight button USB/5 pin MIDI footswitch.
 
 
 Check it out on Thingiverse here: https://www.thingiverse.com/thing:3840065
+I've uploaded a video briefly showing how this works: https://www.youtube.com/watch?v=9XS2CDV4Rg0
 
 I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/product/deluge/) as a way to manage the new looping functionality in the (now out) 3.0 firmware. I wanted to be able to turn the loop mode on/off, as well as other various functions, either via USB MIDI or via standard 5-pin MIDI. This does that, and more! 
 
