@@ -47,7 +47,7 @@ The menu should be straight forward to use. There are a couple of screens that h
 - Teensy ++2.0 (https://www.pjrc.com/store/teensypp.html)
 - 8 x Guitar Footswitch, either momentary (https://www.aliexpress.com/item/32800932179.html) or latching (https://www.aliexpress.com/item/32826054526.html)
 - 0.96" OLED I2C display (https://www.aliexpress.com/item/32896971385.html)
-- 8 x 5mm 5V LEDs from eBay (I don't have a link to the specific item, they have resistors built into the wiring)
+- 8 x 5mm 5V LEDs (https://www.aliexpress.com/item/32240559912.html)
 - 5 pin MIDI port (https://www.aliexpress.com/item/32972269819.html)
 - 2 x 220 ohm resistors for the MIDI port (see https://www.pjrc.com/teensy/td_libs_MIDI.html for wiring info)
 - 7mm momentary push button (https://www.aliexpress.com/item/32790920961.html) as an easy way to update the Teensy without opening the case. Eventually I will replace this with a DC input jack.
