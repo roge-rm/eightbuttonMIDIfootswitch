@@ -10,11 +10,13 @@ I've uploaded a video briefly showing how this works: https://www.youtube.com/wa
 
 I built this to go along with my [Synthstrom Deluge](https://synthstrom.com/product/deluge/) as a way to manage the new looping functionality in the (now out) 3.0 firmware. I wanted to be able to turn the loop mode on/off, as well as other various functions, either via USB MIDI or via standard 5-pin MIDI. This does that, and more! 
 
+You can use either [toggle (latching)](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch-toggle.ino) or [momentary](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch-momentary.ino) switches. There are two versions of the code depending on which switch you use.
+
 Currently there are 6 modes of operation selectable at boot. 
 The selection screen can be returned to at any time by resetting the unit or pressing buttons 4 + 8 (top and bottom on the right side) together simultaneously.
-- MIDI Note Timed (on note sent on button press, off note sent after a preset time)
+- MIDI Note Momentary/Timed (on note sent on button press, off note sent after button is released (or preset time if using toggle switches)
 - MIDI Note Toggle (press button once to turn on, press again to turn off)
-- MIDI CC Timed (same as mode 1 but with CC messages) 
+- MIDI CC Momentary/Timed (same as mode 1 but with CC messages) 
 - MIDI CC Toggle (same as mode 2 but with CC)
 - Program Change (pressing each of the 8 buttons sends a different Program Change message)
 - Settings Menu (change channels, MIDI messages, default options)
@@ -26,7 +28,7 @@ You can customize all of the messages sent by the footswitch. Currently the foll
 - NOTE - MIDI note numbers and velocities
 - CC - Control Change numbers and on/off values
 - PC - Program Change numbers
-- DEF - default runmode (RUNM), menu timeout (MENU), how long before OFF note/CC is sent (NOFF/COFF)
+- DEF - default runmode (RUNM), menu timeout (MENU), how long before OFF note/CC is sent (NOFF/COFF) (only in toggle version)
 - LOAD - load values from EEPROM
 - SAVE - save values to EEPROM (changes you make to settings will not be stored unless you press this)
 
@@ -43,7 +45,7 @@ The menu should be straight forward to use. There are a couple of screens that h
 - Tape (for binding wires, holding the OLED screen in place)
 - Screwdriver
 - Teensy ++2.0 (https://www.pjrc.com/store/teensypp.html)
-- 8 x Guitar Footswitch (https://www.aliexpress.com/item/32826054526.html) - I did not realize these were latching switches when I ordered them, momentary switches would have been a better choice.
+- 8 x Guitar Footswitch, either momentary (https://www.aliexpress.com/item/32800932179.html) or latching (https://www.aliexpress.com/item/32826054526.html)
 - 0.96" OLED I2C display (https://www.aliexpress.com/item/32896971385.html)
 - 8 x 5mm 5V LEDs from eBay (I don't have a link to the specific item, they have resistors built into the wiring)
 - 5 pin MIDI port (https://www.aliexpress.com/item/32972269819.html)
@@ -72,7 +74,7 @@ You can check out some pictures of my wiring [here](https://raw.githubuserconten
 - Wire the 7mm momentary switch to the RST and GND pins on the end of the Teensy furthest from the USB port (the bottom, in the pinout diagram). 
 - Solder 220 ohm resistors to pins 5 and 4 on the DIN-5 MIDI plug and install it into the bottom of the housing. See the MIDI library page [here](https://www.pjrc.com/teensy/td_libs_MIDI.html) for more information/diagrams.
 - Wire the MIDI plug as shown in the [schematic](https://raw.githubusercontent.com/hunked/eightbuttonMIDIfootswitch/master/images/schematic.png). Pin 2 goes to GND (I ran it to the reset switch as it was close by), pin 5 (via 220 ohm resistor) goes to pin 3 on the Teensy, and pin 4 on the DIN-5 MIDI plug (via 220 ohm resistor) goes to a 5V pin on the Teensy (I used the one by the RST pin).
-- Edit the [code](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch.ino) to set pin assignments and customize your MIDI/CC/Program Change messages (you can change these from the switch itself) and then upload it to the Teensy using the Arduino/Teensyduino software. Make sure you set the USB Type (under Tools->USB Type) to MIDI.
+- Flash the appropriate code based on whether you used [momentary](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch-momentary.ino) or [toggle/latching](https://github.com/hunked/eightbuttonMIDIfootswitch/blob/master/8buttonfootswitch-toggle.ino) switches. If you used different pins than I did you will need to change the assignments in the code accordingly. **Make sure you set the USB Type (under Tools->USB Type) to MIDI.**
 - Test it out! The LEDs will flash as you push the buttons and the screen will display the MIDI message number being sent. 
 - Squish the wires into place, close the housing and screw it together. You may need to bore out the screw holes a bit with a drill.
 - Stomp those switches until your roommate/neighbour/family member complains about the noise.
