@@ -14,7 +14,7 @@ You can use either [toggle (latching)](https://github.com/hunked/eightbuttonMIDI
 
 Currently there are 6 modes of operation selectable at boot. 
 The selection screen can be returned to at any time by resetting the unit or pressing buttons 4 + 8 (top and bottom on the right side) together simultaneously.
-- MIDI Note Momentary/Timed (on note sent on button press, off note sent after button is released (or preset time if using toggle switches)
+- MIDI Note Momentary/Timed (on note sent on button press, off note sent after button is released (or preset time if using toggle switches))
 - MIDI Note Toggle (press button once to turn on, press again to turn off)
 - MIDI CC Momentary/Timed (same as mode 1 but with CC messages) 
 - MIDI CC Toggle (same as mode 2 but with CC)
